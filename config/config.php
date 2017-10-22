@@ -2,7 +2,7 @@
 
 
 /**
- * 网店配置模板
+ * 网店配置模板 // test
  *
  * 版本 $Id: config.sample.php 37482 2009-12-08 10:54:56Z ever $
  * 配置参数讨论专贴 http://www.ecclub.cn/bbs/thread-61957-1-1.html
