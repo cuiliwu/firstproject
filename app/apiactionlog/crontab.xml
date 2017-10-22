@@ -1,0 +1,18 @@
+<cronentries>
+    <cron id="apiactionlog_tasks_cleanexpiredapilog">
+        <description>删除一个月之前的api日志信息</description>
+        <schedule>0 4 */1 * *</schedule>
+        <enabled>true</enabled>
+    </cron>
+    <cron id="apiactionlog_tasks_requiresendingapilog">
+        <description>重试超过指定时间的发起中的请求</description>
+        <schedule>10 */1 * * *</schedule>
+        <enabled>false</enabled>
+    </cron>
+    <cron id="apiactionlog_tasks_retryapilog">
+        <description>矩阵api请求失败重试</description>
+        <schedule>15 * * * *</schedule>
+        <enabled>false</enabled>
+    </cron>
+
+</cronentries>

@@ -1,0 +1,5 @@
+<services>
+	<service id="api.demo.test">
+        <class>demo_rpc_test</class>
+    </service>
+</services>

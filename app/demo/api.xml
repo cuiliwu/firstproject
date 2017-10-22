@@ -1,0 +1,8 @@
+<apilist>
+   
+    <module id='demo.test' type='demo' class='demo_rpc_test'>
+        <api  function='get_member_info' > jack测试得到会员信息</api>
+    </module>
+
+    
+</apilist>

@@ -1,0 +1,19 @@
+<app>
+    <name>标签管理</name>
+    <description>tags 标签管理</description>
+
+    <author>
+        <name>ecclub开发团队</name>
+        <email>dev@ecclub.cn</email>
+        <url>http://www.ecclub.cn</url>
+    </author>
+
+    <version>0.1</version>
+    <license>ecclub license</license>
+    <parent_model_class>dbeav_model</parent_model_class>
+
+	<depends>
+		<app>desktop</app>
+        <app>site</app>
+	</depends>
+</app>

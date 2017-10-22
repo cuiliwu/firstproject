@@ -1,0 +1,8 @@
+<services>
+	<service id="desktop_controller_content.desktop.default.index">
+        <class>ins_ctl_admin_out</class>
+    </service>
+	<service id="desktop_menu">
+        <class>ins_service_menu</class>
+    </service>
+</services>

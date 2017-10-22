@@ -1,0 +1,5 @@
+<apiv_mapper>
+  <api version="2.0">
+    <target version="2.2">ecos.test</target>
+  </api>
+</apiv_mapper>

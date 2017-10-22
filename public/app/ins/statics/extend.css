@@ -1,0 +1,78 @@
+.message-error { position: absolute; z-index: 99999; }
+.message-error:focus { outline: 0 none; }
+.message-error .icon { color: #e44d10; }
+.message-success { position: absolute; z-index: 99999; }
+.message-success:focus { outline: 0 none; }
+.message-success .icon { color: #508524; }
+
+.message-body { background-color: #FFFFFF; max-width: 400px; padding: 30px 0; border: 1px solid #a3afb9; -webkit-box-shadow: 2px 2px 1px rgba(150, 150, 150, 0.5); -moz-box-shadow: 2px 2px 1px rgba(150, 150, 150, 0.5); box-shadow: 2px 2px 1px rgba(150, 150, 150, 0.5); color: #333333; _width: 300px; }
+.message-body .icon { font-size: 30px; float: left; line-height: 30px; }
+.message-body .message-content {padding:0 39px 0 66px;line-height: 26px; }
+
+.message-success .message-content{
+	background:url(cusimages/success-icon.png) no-repeat;
+}
+.message-error .message-content{
+	background:url(cusimages/error-icon.png) no-repeat;
+}
+.message { display: inline-block; position: absolute; background-color: #FFDEAC; padding: 0 8px; line-height: 22px; color: #333333; font-size: 12px; }
+.message:focus { outline: 0 none; }
+
+.error { color: #666666; }
+.error .icon { color: #B14C49; }
+
+.success { color: #888888; }
+.success .icon { color: #81A363; }
+.x-input{
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #e5e6e7;
+    border-radius: 1px;
+    color: inherit;
+    display: block;
+    font-size: 14px;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+	 height: 34px;
+    line-height: 1.42857;
+}
+
+
+
+
+.error {
+    color: #666;
+}
+
+.notice-inline {
+display:block;
+position:absolute;
+margin-top:5px;
+color:red;text-align:left;
+}
+
+
+.error .icon {
+	
+    display:none;
+ }
+ 
+ 
+.auto-change-verify-handle {
+    cursor: pointer;
+}
+.verify-code {
+    vertical-align: middle;
+}
+
+ .auto-change-verify-handle {
+    cursor: pointer;
+}
+.verify-code {
+    vertical-align: middle;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}

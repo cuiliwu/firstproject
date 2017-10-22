@@ -1,0 +1,32 @@
+<?php
+/**
+ * ecclub licence
+ *
+ * @copyright  Copyright (c) 2005-2010 ecclub Technologies Inc. (http://www.ecclub.cn)
+ * @license  http://www.ecclub.cn/ ecclub License
+ */
+
+class tags_task 
+{
+    public function post_install()
+    {
+    	logger::info('Register tag meta');
+    	$obj_tags = app::get( 'desktop' )->model( 'tag' );
+    	$col = array(
+    	    'params' => array(
+    	        'type' => 'serialize',
+    	        'editable' => false,
+    	    ),
+    	);
+    	$obj_tags->meta_register( $col );
+        logger::info('Initial tags');
+        kernel::single('base_initial', 'tags')->init();
+       
+    }
+    
+    function post_uninstall(){
+    	logger::info('drop tag meta');
+    	$obj_tags = app::get( 'desktop' )->model( 'tag' );
+    	$obj_tags->meta_meta( 'params' );
+    }
+}

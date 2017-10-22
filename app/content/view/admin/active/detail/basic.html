@@ -1,0 +1,45 @@
+<script>
+$('aEditor').retrieve('setTabs',function(){
+    var gtabs=$ES('#menu-desktop .spage-side-nav li.l-handle');
+    new ItemAgg(gtabs,$ES('#aEditor .spage-main-box'),{
+    activeName:'cur',
+    onActive:function(tab,item){
+        var anotherItems=$$($A(this.items).remove(item));
+        if(tab.hasClass('all')){
+            anotherItems.show();
+        }else{
+            anotherItems.hide();
+        }
+        }
+    });
+}());
+</script>
+<h3><{t}>基本信息<{/t}></h3>
+<div id="x-g-basic" class="goods-detail">
+    <div class="tableform">
+        <div class="division">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <th><em><font color="red">*</font></em><{t}>活动名称：<{/t}></th>
+                    <td>
+                        <{input type="text" id="active_title" name="active[title]" required="true" vtype='required' value=$active.title }>
+                    </td>
+                </tr>
+                <tr>
+                     <th><{t}>活动页模板：<{/t}></th>
+                     <td>
+                        <{input type='select' name='active[tmpl_path]' value=$active.tmpl_path required='true' vtype='required' caution=$__content='请选择模版'|t:'content' options=$activelist}>
+                     </td>
+                </tr>
+
+                <tr>
+                    <th><{t}>发布：<{/t}></th>
+                    <td>
+                        <input type="radio" value="1" name="active[ifpub]" <{if $active.ifpub == 'true'}>checked<{/if}> /><{t}>是<{/t}>
+                        <input type="radio" value="0" name="active[ifpub]" <{if $active.ifpub != 'true'}>checked<{/if}> /><{t}>否<{/t}>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

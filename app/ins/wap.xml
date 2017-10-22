@@ -1,0 +1,9 @@
+<site>
+	    <explorer id='ins' path='view/wap'>触屏版前台模版</explorer>
+
+<module id='ins' controller='wap_activity' >
+    <name>activity</name>
+    <title>活动页</title>
+    <disable>false</disable>
+</module>
+</site>

@@ -1,0 +1,18 @@
+<app>
+    <name>用户认证系统</name>
+    <description>Pluggable Authentication Modules</description>
+
+    <author>
+        <name>开发团队</name>
+        <email>dev@ecclub.cn</email>
+        <url>http://www.ecclub.cn</url>
+    </author>
+
+    <version>0.1</version>
+    <license>baidu</license>
+
+	<depends>
+		<app>dbeav</app>
+	</depends>
+
+</app>

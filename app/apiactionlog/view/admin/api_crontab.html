@@ -1,0 +1,57 @@
+<form method="POST" action="index.php?app=apiactionlog&ctl=admin_apilog&act=crontab_setting" class="tableform" id="form_crontab_setting">
+<div class="division">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" id='crontab_level' class="crontab-set">
+<tr>
+  <th><em class="c-red">*</em><{t}>是否开启：<{/t}></th>
+  <td>
+    <{input type="bool" name="crontab_setting_status" value=$crontab_setting_status width=60 height=60}>
+    <span class="notice-inline"><{t}>  &nbsp;&nbsp;&nbsp;&nbsp;因此定时任务会占用大量的服务器资源。请谨慎开启。<{/t}></span>
+  </td>
+</tr>
+<tr>
+  <th><em class="c-red">*</em><{t}>时间：<{/t}></th>
+  <td><{input type="number" name="crontab_setting_minute" style="width:50px" size="20" vtype="required&&unsignedint" value=$crontab_setting_minute}>
+    <span class="notice-inline"><{t}>分钟（默认120分钟），若此同步任务在超过设置的时间后仍处于“发起中”，则自动重试。<{/t}></span></td>
+</tr>
+</table>
+</form>
+
+</div>
+<{area inject='.mainFoot'}>
+  <div class="table-action">
+	  <{button type="submit" label=$___apiactionlog="保存"|t:'apiactionlog' id="crontab_setting-form-submit"}>
+  </div>
+<{/area}>
+
+<script>
+(function(){
+	var _form = $('form_crontab_setting');
+	var btn =$('crontab_setting-form-submit');
+	var finder = finderGroup['<{$env.get._finder.finder_id}>'];
+
+	_form.store('target',{
+		onSuccess:function(response){
+			var hash_res_obj = JSON.decode(response);
+
+			if (hash_res_obj.success != undefined && hash_res_obj.success != "")
+			{
+				try{
+					var _dialogIns = btn.getParent('.dialog').retrieve('instance');
+				}catch(e){}
+
+				if(_dialogIns)
+				{
+					_dialogIns.close();
+					window.finderGroup['<{$env.get._finder.finder_id}>'].refresh();
+				}
+			}
+
+		}
+	});
+
+	    btn.addEvent('click',function(){
+		    _form.fireEvent('submit',{stop:$empty});
+		});
+
+})();
+</script>

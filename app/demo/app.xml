@@ -1,0 +1,16 @@
+<app>
+    <name>DEMO API TEST</name>
+    <description>DEMO API TEST</description>
+
+    <author>
+        <name>phpwindow</name>
+        <email>34770866@qq.com</email>
+        <url>http://www.phpwindow.com</url>
+    </author>
+    <version>1.0</version>
+    <license>phpwindow license</license>
+    <parent_model_class>dbeav_model</parent_model_class>
+    <depends>
+        <app>base</app>
+    </depends>
+</app>

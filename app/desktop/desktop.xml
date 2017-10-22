@@ -1,0 +1,45 @@
+<desktop>
+    <panelgroup id="setting" icon="panel-setting.png" order="10">配置</panelgroup>
+    <panelgroup id="user" icon="panel-user.png" order="50">管理员和权限</panelgroup>
+<!--    <panelgroup id="network" icon="panel-network.png" order="80">联网</panelgroup>-->
+    <panelgroup id="other" icon="panel-other.png" order="70">其他</panelgroup>
+
+
+
+
+
+ <workground name="桌面" id="site.wrokground.dashboard" app="desktop" controller="dashboard" action="index" order="1">
+        <menugroup name="桌面">
+            <menu controller='dashboard' action='index' permission='dashboardpre' display='true' order="300">桌面</menu>
+ </menugroup>
+</workground>
+
+
+    <!--<adminpanel group="desktop_setting" controller="system" permission="performance" action="service" display='true' order="70">系统配置</adminpanel> -->
+    <adminpanel group="desktop_setting" controller="email" permission="performance" action="setting" display='false'>系统配置</adminpanel>
+
+
+    <adminpanel group="desktop_user" permission="users" controller="users" display='true'>操作员管理</adminpanel>
+    <adminpanel group="desktop_user" permission="users" controller="roles" display='true'>角色管理</adminpanel>
+    <adminpanel group="desktop_other" permission="other" controller="pam" display='true'>登录认证设置</adminpanel>
+
+    <adminpanel group="desktop_setting" controller="adminpanel" action="index" permission="setting" display="false" order='20'>配送方式</adminpanel>
+
+    <adminpanel group="desktop_other" permission="performance" controller="cachemgr" display='false'>缓存管理</adminpanel>
+
+
+    <adminpanel group="desktop_other" permission="performance" controller="cachemgr" action="status" display='true' order="50">缓存管理</adminpanel>
+    <adminpanel group="desktop_other" permission="performance" controller="cachemgr" action="optimize" display='false'>优化缓存</adminpanel>
+    <adminpanel group="desktop_other" permission="performance" controller="cachemgr" action="clean" display='false'>清空缓存</adminpanel>
+    <adminpanel group="desktop_setting" permission="shopsetting" controller="appmgr" display='true' order="20">应用中心</adminpanel>
+    <adminpanel group="desktop_setting" permission="shopsetting" controller="setting" display='true' order="20">系统设置</adminpanel>
+    <permissions>
+        <permission id="shopsetting" display='true'>商店设置</permission>
+    	<permission id="dashboardpre" display='true'>后台桌面</permission>
+        <permission id="setting" display='true'>数据管理</permission>
+        <permission id="performance" display='true'>缓存,队列,计划任务管理</permission>
+        <permission id="users" display='true'>权限管理</permission>
+    	<permission id="other" display='true'>其他</permission>
+    </permissions>
+
+</desktop>

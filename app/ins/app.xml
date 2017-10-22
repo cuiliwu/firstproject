@@ -1,0 +1,20 @@
+<app>
+    <name>程序初始化</name>
+    <description>程序初始化</description>
+
+    <author>
+        <name>dev</name>
+        <email>dev@ecclub.cn</email>
+        <url>http://www.ecclub.cn</url>
+    </author>
+
+    <version>0.1</version>
+    <license>ecclub license</license>
+
+	<depends>
+		<app>base</app>
+		<app>dbeav</app>
+		<app>desktop</app>
+	</depends>
+
+</app>
