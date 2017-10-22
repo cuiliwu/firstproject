@@ -1,0 +1,10 @@
+include("FirePHPCore/fb.php");
+
+FB::log('fds');
+
+$var = array('a'=>'pizza', 'b'=>'cookies', 'c'=>'celery');  
+fb($var);  
+fb($var, "An array");  
+fb($var, FirePHP::WARN);  
+fb($var, FirePHP::INFO);  
+fb($var, 'An array with an Error type', FirePHP::ERROR);  

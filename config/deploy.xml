@@ -1,0 +1,110 @@
+<deploy>
+
+    <licence file="license.txt" />
+
+    <product_name>ECCLUB开发框架V4.0</product_name>
+    <product_version>2.3.78</product_version>
+    <business_version>system</business_version>
+    <publish_version>ECCLUB开发框架V4</publish_version>
+    <product_key>standard</product_key>
+    <product_desc>一夕科技，让电商更专业！</product_desc>
+
+    <installer>
+
+        <title>系统安装</title>
+
+        <banner><![CDATA[
+            <h1 id="ECstore-ver">系统安装<sup style="color:red;font-size:12px"></sup></h1>
+            ]]></banner>
+
+        <style><![CDATA[
+            ]]></style>
+
+        <finish>
+            <message><![CDATA[
+                <div>安装顺利完成！
+                    <p style="margin-top:20px;">访问后台:</p>
+                    <p><a href="%BASE_URL%">%BASE_URL%/index.php</a></p>
+                    <p>管理网店:</p>
+                    <p><a href="%BASE_URL%/ecclub_admin">%BASE_URL%/ecclub_admin</a></p>
+                </div>
+
+                ]]></message>
+        </finish>
+        <writeable_check>
+            <dir>config</dir>
+            <dir>data</dir>
+            <dir>public</dir>
+            <dir>public/files</dir>
+            <dir>public/images</dir>
+            <dir>themes</dir>
+        </writeable_check>
+
+        <check>
+            <writeable show_name="目录权限">
+                <dirname name="config" />
+                <dirname name="data" />
+                <dirname name="themes" />
+                <dirname name="public" />
+                <dirname name="public/files" />
+                <dirname name="public/images" />
+            </writeable>
+
+            <version show_name="版本号">
+                <php name="php" value="5.3" sign=">=" exec_function="base_system_composite@check_php_version"/>
+            </version>
+
+            <php_configure show_name="在php.ini中的配置值">
+                <list name="max_input_vars" description="" value="1000" sign=">=" />
+                <list name="safe_mode" description="" value="OFF" />
+            </php_configure>
+
+            <extension_library show_name="扩展库">
+                <list name="gd" status="active"/>
+                <list name="zlib" status="active"/>
+                <list name="mcrypt" status="active"/>
+                <list name="iconv" status="active"/>
+                <list name="openssl" status="active"/>
+                <list name="mysql" status="active"/>
+                <list name="xml" status="active"/>
+                <list name="mbstring" status="active"/>
+                <list name="bcmath" status="active"/>
+                <!--<list name="pcntl" status="active" exec_function="base_system_composite@check_web_pcntl"/>-->
+                <list name="shmop" status="active"/>
+                <list name="simplexml" status="active"/>
+            </extension_library>
+            <common_function show_name="必用函数">
+                <list name="proc_open" description="ecos2.0 queue must be used"/>
+                <list name="fsockopen" description="ecos2.0 queue must be used" exec_function="base_system_composite@check_web_ping" />
+            </common_function>
+            <other show_name="其他重要检测">
+                <list name="flock" exec_function="base_system_composite@check_file_flock"/>
+            </other>
+        </check>
+    </installer>
+
+    <package>
+        <app id="ins" default="true" locked="true" hidden="false" />
+        <app id="apiactionlog" default="true" locked="true" hidden="false" />
+        <app id="dbeav" default="true" locked="true" hidden="false" />
+        <app id="desktop" default="true" locked="true" hidden="false" />
+        <app id="pam" default="true" locked="true" hidden="false" />
+        <!-- <app id="importexport" default="true" locked="true" hidden="false" /> -->
+        <app id="setup" default="true" locked="true" hidden="true" />
+        <app id="operatorlog" default="true" locked="true" hidden="false" />
+        <app id="ectools" default="true" locked="true" hidden="false" />
+        <app id="tags" default="true" locked="true" hidden="false" />
+        <app id="base" default="true" locked="true" hidden="false" />
+        <app id="dev" default="true" locked="true" hidden="false" />
+        <app id="system" default="true" locked="true" hidden="false" />
+        <app id="image" default="true" locked="true" hidden="false" />
+        <!-- <app id="wap" default="true" locked="true" hidden="false" />  -->
+        <!-- <app id="content" default="true" locked="true" hidden="false" />
+        <app id="site" default="true" locked="true" hidden="false" />  -->
+        <!-- <app id="weixin" default="true" locked="true" hidden="false" />  -->
+    </package>
+    <setting app="desktop" key="banner">ECCLUB开发框架v4</setting>
+    <setting app="desktop" key="logo">ECCLUB开发框架v4</setting>
+    <setting app="desktop" key="logo_desc">ECCLUB开发框架v4</setting>
+
+</deploy>

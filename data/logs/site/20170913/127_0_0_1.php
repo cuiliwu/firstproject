@@ -1,0 +1,31 @@
+<?php exit()?>
+2017-09-13 14:17:59	150528347959b8cd97b78be	INFO	Scanning local Applications... 
+
+2017-09-13 14:17:59	150528347959b8cd97b78be	INFO	Scanning local Applications ok.
+
+2017-09-13 14:18:00	150528347959b8cd97b78be	INFO	Updating base_application_dbtable@feixiang.
+
+2017-09-13 14:18:00	150528347959b8cd97b78be	INFO	ALTER IGNORE TABLE `sdb_feixiang_orders_item` 
+	ADD COLUMN `order_no` mediumint(8) unsigned not null default 0 comment '订单表ID' AFTER order_item_id,
+	DROP COLUMN `order_id`;
+
+2017-09-13 14:18:00	150528347959b8cd97b78be	INFO	Updating base_application_cache_expires@feixiang.
+
+2017-09-13 14:18:00	150528347959b8cd97b78be	INFO	Installing Cache_Expires DB:FEIXIANG_COMPANY
+
+2017-09-13 14:18:00	150528347959b8cd97b78be	INFO	UPDATE CACHE EXPIRES KV DATA
+
+2017-09-13 14:18:00	150528347959b8cd97b78be	INFO	Installing Cache_Expires DB:FEIXIANG_GOODS
+
+2017-09-13 14:18:00	150528347959b8cd97b78be	INFO	UPDATE CACHE EXPIRES KV DATA
+
+2017-09-13 14:18:00	150528347959b8cd97b78be	INFO	Installing Cache_Expires DB:FEIXIANG_ORDERS
+
+2017-09-13 14:18:00	150528347959b8cd97b78be	INFO	UPDATE CACHE EXPIRES KV DATA
+
+2017-09-13 14:18:00	150528347959b8cd97b78be	INFO	Installing Cache_Expires DB:FEIXIANG_ORDERS_ITEM
+
+2017-09-13 14:18:00	150528347959b8cd97b78be	INFO	UPDATE CACHE EXPIRES KV DATA
+
+2017-09-13 14:18:00	150528347959b8cd97b78be	INFO	Applications database and services is up-to-date, ok.
+

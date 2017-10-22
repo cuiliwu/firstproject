@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<theme><name>一夕科技ECOS标准开发模版</name>
+<id>default</id>
+<version>v1.0</version>
+<info>通用模版</info>
+<author>ecclub team</author>
+<site>http://www.ecclub.cn</site>
+<update_url> </update_url>
+<borders></borders>
+<views></views>
+<config></config>
+<widgets></widgets>
+</theme>
